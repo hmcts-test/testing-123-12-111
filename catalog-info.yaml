@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "platops-timja-testing"
+  description: hello
+  annotations:
+    # This must match folder-name/job-name in Jenkins.
+    jenkins.io/job-full-name: cft:HMCTS_platops/testing-123-12-111
+    github.com/project-slug: 'hmcts-test/testing-123-12-111'
+  tags:
+    - java
+  links:
+    - url: https://hmcts-reform.slack.com/app_redirect?channel=cloud-native
+      title: cloud-native on Slack
+      icon: chat
+spec:
+  type: service
+  system: platops
+  lifecycle: experimental
+  owner: dts_platform_operations
